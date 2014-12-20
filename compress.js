@@ -1,3 +1,8 @@
+/*
+Author insanehong <insanehong@gmail.com>
+LICENSE under BSD
+*/
+
 function compress(str) {
 
   var repeat = 1;
@@ -15,7 +20,7 @@ function compress(str) {
     if( str.charAt(i) === prev ) {
 
       repeat++;
-
+	if ( i === str.length -1 ) result += repeat;
     } else {
 
       if (repeat > 1) result += repeat;
